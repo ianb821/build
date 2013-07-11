@@ -1,8 +1,6 @@
 #!/usr/bin/perl
 
-################################################
-#
-#  build.pl written by Ian Burns 06/2013
+#################################################
 #  build.pl is an automated build system
 #  replacement for 'make'.  The idea is
 #  to simplify the instructions file and
