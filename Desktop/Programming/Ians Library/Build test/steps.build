@@ -1,0 +1,38 @@
+Comments can be written in any form desired:
+this is a comment
+// this is a comment
+# this is a commment
+/*
+this is a comment block
+*/
+
+Targets are signified by <d> (dependecies) falling their name
+'clean' and 'tar' commands are built into build, no need to create your own
+
+CO (compile object) - short for g++ -c
+COC (compile object with clang) - short for clang++ -c
+LINK - short for g++ -o 'FIRST_TARGET_NAME' and links all the necessary .o files
+LINKC - same as LINK but uses clang
+anything else is used exactly as provided.
+
+
+###############################################
+#
+# Example steps.build file to build 'chess.out'
+#
+###############################################
+
+chess.out <d> chess.o board.o move.o position.o
+LINK
+
+chess.o <d> chess.cpp chess.h board.cpp board.h
+CO chess.cpp (could use g++ -c chess.cpp instead)
+
+move.o <d> move.cpp move.h
+CO move.cpp
+
+position.o <d> position.cpp position.h
+CO position.cpp
+
+board.o <d> board.cpp board.h
+CO board.cpp
