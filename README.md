@@ -17,7 +17,7 @@ some of those include:
     
 
 With build.pl, the instruction file must be named steps.build, and follows a similar 
-format to 'makefile'. For an example instruction file, called see the included 
+format to 'makefile'. For an example instruction file, see the included 
 steps.build file.
 
 For a simple instructions and commands use 'build help' or 'build man'.
